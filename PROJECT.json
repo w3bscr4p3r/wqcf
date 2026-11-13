@@ -1,0 +1,19 @@
+{
+  "name": "WQCF",
+  "full_name": "WOLF Quantum-Safe Cryptographic Foundation",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "status": "experimental-mvp-scaffold",
+  "primary_languages": [
+    "Python",
+    "Rust",
+    "PHP",
+    "TypeScript"
+  ],
+  "standards": [
+    "FIPS 203",
+    "FIPS 204",
+    "FIPS 205",
+    "RFC 5869"
+  ]
+}

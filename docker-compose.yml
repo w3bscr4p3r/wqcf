@@ -1,0 +1,19 @@
+services:
+  wqcf-api:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    environment:
+      WQCF_ENV: ${WQCF_ENV:-development}
+      WQCF_PROVIDER: ${WQCF_PROVIDER:-disabled}
+      WQCF_API_TOKEN: ${WQCF_API_TOKEN:-}
+    ports:
+      - "127.0.0.1:8080:8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    restart: unless-stopped
