@@ -1,0 +1,16 @@
+{
+  "name": "@wolf/wqcf",
+  "version": "0.1.0",
+  "description": "WQCF Node.js/TypeScript SDK",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}
