@@ -37,8 +37,8 @@ def capabilities():
     try:
         p = provider()
         return {"status": "available", **p.capabilities()}
-    except ProviderUnavailable as exc:
-        return {"status": "disabled", "provider": None, "reason": str(exc),
+    except ProviderUnavailable:
+        return {"status": "disabled", "provider": None, "reason": "Provider unavailable",
                 "algorithms": {"kem": [], "signatures": []}}
 
 @app.post("/v1/kem/ml-kem-768/keypair")
